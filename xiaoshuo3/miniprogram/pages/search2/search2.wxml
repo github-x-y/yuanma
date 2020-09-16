@@ -1,0 +1,8 @@
+<!--miniprogram/pages/search2.wxml-->
+<view class="container">
+      <include wx:if="{{books.length ==0}}" src="../../style/temm.wxml"></include>
+      <view wx:for="{{books}}"  wx:key="index">
+          <list class="list" list="{{item}}"></list>
+        </view>
+        <include  wx:if="{{books.length !==0}}" src="../../style/gg.wxml"></include>
+</view>

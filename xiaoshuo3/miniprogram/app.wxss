@@ -1,0 +1,6 @@
+.container{
+  width: 100%;
+}
+@import "style/tem.wxss";
+@import "style/loading.wxss";
+@import "style//gg.wxss"

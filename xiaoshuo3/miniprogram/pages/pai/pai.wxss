@@ -1,0 +1,26 @@
+/* miniprogram/pages/pai/pai.wxss */
+.film-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.film-title text{
+   padding-left: 4px;
+   border-left: 2px solid green;
+   font-weight: 700;
+}
+navigator{
+  padding: 4px 10px;
+  color: green;
+  border-bottom: 1px solid rgb(212, 191, 181);
+}
+.images{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 10rpx;
+  align-items: center;
+}
+.images image{
+  width: 80rpx;
+  height: 80rpx;
+}

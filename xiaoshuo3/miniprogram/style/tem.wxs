@@ -1,0 +1,18 @@
+function splicing(data) {
+  return "https"+decodeURIComponent(data).split('http')[1];
+}
+function covers(data) {
+  return "https://statics.zhuishushenqi.com"+data;
+}
+function splicings(data) {
+    return data.join(" ");
+}
+function Mathceils(data) {
+       return Math.ceil(data);
+   };
+module.exports = {
+splicing:splicing,
+covers:covers,
+splicings:splicings,
+Mathceils:Mathceils
+}

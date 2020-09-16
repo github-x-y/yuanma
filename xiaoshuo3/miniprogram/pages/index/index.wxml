@@ -1,0 +1,75 @@
+<!--miniprogram/pages/index/index.wxml-->
+<wxs src="../../style/tem.wxs" module="commons" />
+<view class="container">
+   <view class="search" bindtap="click7">
+        <image src="../../images/9.png"></image>
+        <text>请输入小说名</text>
+      </view>
+   <view class="lun">
+       <swiper current="1" indicator-dots="ture"
+        autoplay="autoplay" interval="3000" duration="500" indicator-color="rgba(29, 2, 2, 0.719)" circular="ture" indicator-active-color="#3619d6">
+          <swiper-item class="lun-image">
+             <navigator url="../../pages/detail/detail?id={{types[0].male[1]._id}}&title={{types[0].male[1].title}}">
+            <image src="{{commons.splicing(types[0].male[1].cover)}}"></image>
+            </navigator>
+          </swiper-item>
+          <swiper-item class="lun-image">
+            <navigator url="../../pages/detail/detail?id={{types[0].male[2]._id}}&title={{types[0].male[2].title}}">
+            <image src="{{commons.splicing(types[0].male[2].cover)}}"></image>
+            </navigator>
+          </swiper-item>
+          <swiper-item>
+             <navigator url="../../pages/detail/detail?id={{types[1].male[0]._id}}&title={{types[1].male[0].title}}">
+            <image src="{{commons.splicing(types[1].male[0].cover)}}"></image>
+            </navigator>
+          </swiper-item>
+          <swiper-item>
+            <navigator url="../../pages/detail/detail?id={{types[1].male[1]._id}}&title={{types[1].male[1].title}}">
+           <image src="{{commons.splicing(types[1].male[1].cover)}}"></image>
+           </navigator>
+          </swiper-item>
+      </swiper>
+   </view>
+   <view class="fenlei-all">
+      <navigator url="../../pages/pai/pai">
+      <view class="haha">
+          <image src="../../images/1.png"></image>
+          <text>排行榜</text>
+      </view>
+      </navigator>
+      <navigator url="../../pages/feilei/feilei">
+      <view class="xixi">
+          <image src="../../images/2.png"></image>
+          <text>分类</text>
+      </view>
+      </navigator>
+   </view>
+   <view class="film-lists" wx:for="{{types[0]}}" wx:for-item="type" wx:key="index">
+        <view class="film-title">
+        <text class="remen">男生热门</text>
+        <view class="d">
+           <view class="shancu" bindtap="click3">
+            <text>换一批</text>
+            <image src="../../images/10.png"></image>
+         </view>
+        </view>
+        </view>
+        <view wx:for="{{type}}" wx:key="index">
+          <list class="list" list="{{item}}"></list>
+        </view>
+   </view>
+   <view class="film-lists" wx:for="{{types[1]}}" wx:for-item="type" wx:key="index">
+        <view class="film-title">
+        <text class="remen">女生热门</text>
+        <view class="d">
+          <view class="shancu" bindtap="click4">
+            <text>换一批</text>
+            <image src="../../images/10.png"></image>
+         </view>
+        </view>
+        </view>
+        <view wx:for="{{type}}" wx:key="index">
+          <list class="list" list="{{item}}"></list>
+        </view>
+   </view>
+</view>

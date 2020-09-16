@@ -1,0 +1,38 @@
+<!--miniprogram/pages/read/read.wxml-->
+<view class="{{arrays[indexs]=='白天'?'container':'containers'}}">
+  <include wx:if="{{ content.length==0 }}" src="../../style/tem.wxml"></include>
+  <scroll-view wx:else style="height:{{winHeight}}rpx" scroll-y="true" scroll-top="{{titles}}" class="all">
+  <view  class="{{array[index]=='中'?'contentmedium':array[index]=='大'?'contentbig':array[index]=='小'?'contentsmall':''}}">
+  <view id="title">
+  <text>{{num}}</text>
+  </view>
+    <view class="setting">
+      <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      字体:{{array[index]}}
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChanges" value="{{indexs}}" range="{{arrays}}">
+    <view class="picker">
+      模式:{{arrays[indexs]}}
+    </view>
+  </picker>
+  </view>
+    <view class='zwgz' wx:for="{{content}}" wx:for-item="content" wx:key="index">
+     <text class="hang" decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{content}}
+      </text>
+    </view>
+    <view class="shangxia">
+          <view class="shang">
+          <button size="mini" type="warn" plain="true" bindtap="click2">上一章</button>
+          </view>
+          <view class="mulu" bindtap="mulu">
+          <button size="mini" type="warn" plain="true">目录</button>
+          </view>
+          <view class="xia">
+          <button size="mini" type="warn" plain="true" bindtap="click1">下一章</button>
+          </view>
+      </view>
+   </view>
+  </scroll-view>
+</view>

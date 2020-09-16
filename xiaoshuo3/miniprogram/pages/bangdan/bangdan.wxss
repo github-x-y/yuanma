@@ -1,0 +1,4 @@
+/* miniprogram/pages/bangdan/bangdan.wxss */
+navigation-bar{
+  width: 100%;
+}

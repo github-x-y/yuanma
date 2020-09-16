@@ -1,0 +1,44 @@
+<!--miniprogram/pages/feilei/feilei.wxml-->
+<wxs src="../../style/tem.wxs" module="commons" />
+<view class="container">
+     <view class="scroll-view" >
+         <view class="demo1 {{ current == 0 ? 'hover': ''}}" data-current="0" bindtap="click1">男生</view>
+          <view class="demo2 {{ current == 1 ? 'hover': ''}}"   data-current="1" bindtap="click1">女生</view>
+     </view>
+     <swiper style="height:{{winHeight-116}}rpx;" current="{{current}}" indicator-dots="{{indicatorDots}}"  duration="500">
+          <swiper-item >
+            <scroll-view id="demo1" scroll-y="true" style="height:{{winHeight-116}}rpx;">
+                    <view id="demo2" wx:for="{{male}}" wx:for-item="type" wx:key="index">
+                    <navigator url="../../pages/mins/mins?major={{type.name}}&gender=male">
+                     <view class="image1">
+                         <image   wx:key="index" src="{{commons.splicing(type.bookCover[0])}}"></image>
+                         <image   wx:key="index" src="{{commons.splicing(type.bookCover[1])}}"></image>
+                         <image   wx:key="index" src="{{commons.splicing(type.bookCover[2])}}"></image>
+                     </view>
+                     <view class="shuliang">
+                         <text>{{type.name}}</text>
+                         <text>{{type.bookCount}}本</text>
+                     </view>
+                     </navigator>
+                     </view>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view id="demo1" scroll-y="true" style="height:{{winHeight-116}}rpx;">
+                    <view id="demo2" wx:for="{{female}}" wx:for-item="type" wx:key="index">
+                    <navigator url="../../pages/mins/mins?major={{type.name}}&gender=female">
+                     <view class="image1">
+                         <image   wx:key="index" src="{{commons.splicing(type.bookCover[0])}}"></image>
+                         <image   wx:key="index" src="{{commons.splicing(type.bookCover[1])}}"></image>
+                         <image   wx:key="index" src="{{commons.splicing(type.bookCover[2])}}"></image>
+                     </view>
+                     <view class="shuliang">
+                         <text>{{type.name}}</text>
+                         <text>{{type.bookCount}}本</text>
+                     </view>
+                     </navigator>
+                     </view>
+           </scroll-view>
+          </swiper-item>
+      </swiper>
+</view>

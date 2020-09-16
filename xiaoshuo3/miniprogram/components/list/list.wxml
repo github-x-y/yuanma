@@ -1,0 +1,29 @@
+<wxs src="../../style/tem.wxs" module="commons" />
+<navigator url="../../pages/detail/detail?id={{list._id}}&title={{list.title}}">
+<view class="list">
+            <view  class="kk">
+            <image wx:if="{{list.cover}}" src="{{commons.splicing(list.cover)}}"></image>
+            </view>
+            <view class="biaoti">
+               <text class="ziti">{{list.title}}</text>
+               <view class="dd">
+               <text >{{list.shortIntro}}</text>
+               </view>
+               <view class="renqi">
+                   <text>{{list.author}}</text>
+                   <text class="ee">{{list.latelyFollower}}人气</text>
+                   <view class="dousi">
+                     <view class="du">
+                     <text>{{list.tags[0]}}</text>
+                     </view>
+                     <view class="lian">
+                     <text>{{list.tags[1]}}</text>
+                     </view>
+                     <view class="ping">
+                     <text>{{list.tags[2]}}</text>
+                     </view>
+                   </view>
+               </view>
+            </view>
+        </view>
+</navigator>

@@ -1,0 +1,54 @@
+/* miniprogram/pages/about/about.wxss */
+about-page{
+  width: 100%;
+}
+.userinfo{
+   width: 100%;
+   background-image: linear-gradient(to bottom,rgb(160, 118, 39),rgb(235, 230, 219)) ;
+   text-align: center;
+}
+.userinfo image{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 20px 60px;
+}
+.userinfo button{
+  bottom: 10px;
+  border-radius: 50px;
+}
+.user-text{
+  border-left: 2px solid green;
+
+  padding: 4px 4px;
+  font-size: large;
+  font-weight: 600;
+  margin: 4px 0;
+  position: relative;
+}
+.film-list{
+  width: 90px;
+  padding: 0 6px;
+}
+
+.film-list image{
+  width: 100%;
+  height: 120px;
+  border-radius:5%;
+}
+.like-list{
+  display: flex;
+  flex-direction: row;
+  width: 120px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.like-list button{
+  width: 90px;
+  height: 30px;
+  display: block;
+}
+.user-ti{
+  text-align: center;
+  color: rgb(160, 145, 126);
+}

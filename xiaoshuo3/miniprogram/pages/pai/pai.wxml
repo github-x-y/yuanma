@@ -1,0 +1,23 @@
+<!--miniprogram/pages/pai/pai.wxml-->
+<wxs src="../../style/tem.wxs" module="common" />
+<view class="container">
+    <view>
+       <view class="film-title">
+        <text>男生区:</text>
+        </view>
+        <view class="images" wx:for="{{male}}" wx:for-item="type" wx:key="index">
+           <image src="{{common.covers(type.cover)}}"></image>
+           <navigator url="../../pages/source/source?_id={{type._id}}&mouthRank={{type.monthRank}}&totalRank={{type.totalRank}}&title={{type.title}}" >{{type.title}}</navigator>
+        </view>
+        <view class="film-title">
+        <text>女生区:</text>
+        </view>
+        <view class="images" wx:for="{{female}}" wx:for-item="type" wx:key="index">
+           <image src="{{common.covers(type.cover)}}"></image>
+           <navigator url="../../pages/source/source?_id={{type._id}}&mouthRank={{type.monthRank}}&totalRank={{type.totalRank}}&title={{type.title}}" >
+           {{type.title}}
+           </navigator>
+        </view>
+    </view>
+    <view></view>
+</view>

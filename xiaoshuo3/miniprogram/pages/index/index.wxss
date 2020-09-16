@@ -1,0 +1,101 @@
+/* miniprogram/pages/index/index.wxss */
+.container{
+  width: 100%;
+}
+swiper {
+  text-align: center;
+}
+swiper image{
+  width: 80%;
+}
+.fenlei-all{
+  margin-top: 30rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.haha{
+  width: 90rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-left: 120rpx;
+  font-size: small;
+  font-weight: 600;
+}
+.xixi{
+  width: 90rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-right: 120rpx;
+  font-size: small;
+  font-weight: 600;
+}
+.haha image{
+   width: 100%;
+   height: 90rpx;
+}
+.xixi image{
+  width: 100%;
+  height: 90rpx;
+}
+.film-lists{
+  width: 100%;
+}
+.film-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-weight: 500;
+}
+.remen{
+   padding-left: 4px;
+   border-left: 2px solid green;
+   font-weight: 700;
+}
+.d {
+  padding-right: 13px;
+  font-weight: 700;
+  color: green;
+}
+.list{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding:6px 6px;
+}
+.shancu text:first-child{
+  font-size: small;
+  position: relative;
+  bottom: 10rpx;
+}
+.shancu image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search{
+  width: 80%;
+  margin-top: 20rpx;
+  margin-right: 10%;
+  margin-left: 10%;
+  border: 1rpx solid gainsboro;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 10rpx;
+  margin-bottom: 20rpx;
+}
+.search image{
+    width: 40rpx;
+    height: 40rpx;
+    padding-left: 10rpx;
+}
+.search text{
+  padding: 0 20rpx;
+  font-weight: 300;
+}

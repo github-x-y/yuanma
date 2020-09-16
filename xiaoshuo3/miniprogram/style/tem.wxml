@@ -1,0 +1,6 @@
+<view class="load">
+    <image src="../../images/loading.gif"></image>
+    <view>
+      <text>内容加载中......</text>
+    </view>
+</view>

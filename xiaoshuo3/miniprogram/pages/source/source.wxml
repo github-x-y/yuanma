@@ -1,0 +1,44 @@
+<!--miniprogram/pages/source/source.wxml-->
+<view class="container">
+    <view wx:if="{{mouthRank}}">
+     <view class="scroll-view" >
+         <view class="demo1 {{ current == 0 ? 'hover': ''}}" data-current="0" bindtap="click1">周榜</view>
+          <view class="demo2 {{ current == 1 ? 'hover': ''}}"   data-current="1" bindtap="click1">月榜</view>
+          <view class="demo3 {{ current == 2 ? 'hover': ''}}"  data-current="2" bindtap="click1">总榜</view>
+     </view>
+     <swiper style="height:{{winHeight-146}}rpx" current="{{current}}" indicator-dots="{{indicatorDots}}"  duration="500">
+          <swiper-item >
+            <scroll-view class="scroll-view_H" scroll-y="true"  style="height:{{winHeight-146}}rpx;">
+                <view wx:for="{{week.week}}" wx:key="index">
+                <list class="list" list="{{item}}"></list>
+               </view>
+           </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view class="scroll-view_H" scroll-y="true"   style="height:{{winHeight-146}}rpx;">
+                <view wx:for="{{mouth.mouth}}" wx:key="index">
+                <list class="list" list="{{item}}"></list>
+               </view>
+           </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view class="scroll-view_H" scroll-y="true"   style="height:{{winHeight-146}}rpx;">
+                <view  wx:for="{{all.all}}" wx:key="index" >
+                 <list class="list" list="{{item}}"></list>
+               </view>
+             </scroll-view>
+          </swiper-item>
+      </swiper>
+      </view>
+      <view wx:else>
+            <swiper style="height:{{winHeight}}rpx" current="{{current}}" indicator-dots="{{indicatorDots}}"  duration="500">
+          <swiper-item >
+            <scroll-view class="scroll-view_H" scroll-y="true" bindscroll="scroll"  style="height:{{winHeight}}rpx;">
+                <view class="list" wx:for="{{week.week}}" wx:key="index">
+                <list list="{{item}}"></list>
+               </view>
+           </scroll-view>
+          </swiper-item>
+      </swiper>
+      </view>
+</view>

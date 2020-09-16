@@ -1,0 +1,25 @@
+<!--miniprogram/pages/mins/mins.wxml-->
+<view class="container">
+   <view class="type">
+        <text class="{{type == 'hot'?'a':''}}" bindtap="click" data-type="hot">热门</text>
+        <text class="{{type == 'new'?'a':''}}" bindtap="click" data-type="new">新书</text>
+        <text class="{{type == 'reputation'?'a':''}}" bindtap="click" data-type="reputation">好评</text>
+        <text class="{{type == 'over'?'a':''}}"  bindtap="click" data-type="over">完结</text>
+        <text class="{{type == 'monthly'?'a':''}}" bindtap="click" data-type="monthly">vip</text>
+   </view>
+   <scroll-view class="mins" scroll-x="true">
+        <text  class="{{minor == minorr? 'a':''}}" wx:for="{{minors}}" wx:for-item="minorr" wx:key="index" bindtap="click2" data-mins="{{minorr}}">{{minorr}}</text>
+   </scroll-view>
+   <view style="height:{{winHeight-128}}rpx">
+      <scroll-view id="demo1" scroll-y="true" style="height:{{winHeight-128}}rpx;" lower-threshold="20rpx" bindscrolltolower="lower"> 
+                  <include wx:if="{{total==0}}" src="../../style/temm.wxml"></include>
+                    <view id="demo2" wx:for="{{books}}" wx:for-item="book" wx:key="index">
+                     <view class="image1">
+                         <list class="list" list="{{book}}"></list>
+                     </view>
+                     </view>
+                    <include  wx:if="{{ showload }}" src="../../style/loading.wxml"></include>
+                     <include  wx:if="{{ showland }}" src="../../style/gg.wxml"></include>
+            </scroll-view>
+   </view>
+</view>

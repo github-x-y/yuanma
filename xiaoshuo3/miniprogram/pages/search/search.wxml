@@ -1,0 +1,27 @@
+<!--miniprogram/pages/search.wxml-->
+<view class="container">
+      <view class="search">
+        <image src="../../images/9.png"></image>
+        <input class="weui-input" auto-focus placeholder="请输入小说名"  value="{{input}}" confirm-type="search" bindinput="input" bindconfirm="cofirm"/>
+      </view>
+      <view class="tui">
+         <text>热门推荐</text>
+         <view class="huan" bindtap="click">
+            <text>换一批</text>
+            <image src="../../images/10.png"></image>
+         </view>
+      </view>
+      <view class="tag">
+          <text wx:for="{{tag}}" wx:for-item="tag" wx:key="index" bindtap="click2" data-id="{{tag.word}}">{{tag.word}}</text>
+      </view>
+      <view class="lishi">
+         <text>收搜历史</text>
+         <view class="shancu" bindtap="click3">
+            <text>删除历史</text>
+            <image src="../../images/11.png"></image>
+         </view>
+      </view>
+      <view class="tag">
+          <text wx:for="{{his}}" wx:for-item="tag" wx:key="index" bindtap="click2" data-id="{{tag}}">{{tag}}</text>
+      </view>
+    </view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/read/read",
+    "pages/mulu/muli",
+    "pages/search/search",
+    "pages/mins/mins",
+    "pages/feilei/feilei",
+    "pages/source/source",
+    "pages/bangdan/bangdan",
+    "pages/pai/pai",
+    "pages/about/about",
+    "pages/search2/search2"
+  ],
+  "window": {
+    "backgroundColor": "#af8c2a",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#af8c2a",
+    "navigationBarTextStyle": "black"
+
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {
+    "list": "components/list/list"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "书城",
+        "iconPath": "images/7.png",
+        "selectedIconPath": "images/6.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "书架",
+        "iconPath": "images/5.png",
+        "selectedIconPath": "images/4.png"
+      }
+    ]
+  }
+}

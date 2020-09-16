@@ -1,0 +1,18 @@
+<!--miniprogram/pages/about/about.wxml-->
+<view class="about-page">
+    <view class="userinfo">
+         <image src="{{ userInfo.avatarUrl || '../../images/user.png'}}"></image>
+         <view wx:if="{{ userInfo }}" class="button">{{userInfo.nickName}}</view>
+         <button  wx:else plain type="warn" open-type="getUserInfo" bindgetuserinfo="getuserinfo">用户授权登录</button>
+    </view>
+    <view class="user-like">
+         <view class="user-text">我的书架:</view>
+         <view class="user-ti" wx:if="{{ showtisi }}">空空如也。。。</view>
+        <scroll-view class="scroll-view_H" scroll-y="true"  style="height:{{winHeight-390}}rpx">
+         <view  wx:for="{{ like }}"  wx:key="index">
+              <list class="list" list="{{item}}"></list>
+         </view>
+         </scroll-view>
+    </view>
+</view>
+

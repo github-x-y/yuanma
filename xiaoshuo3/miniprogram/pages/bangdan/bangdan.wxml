@@ -1,0 +1,13 @@
+<!--miniprogram/pages/bangdan/bangdan.wxml-->
+<view class="container">
+<page-meta>
+  <navigation-bar
+    title="haha"
+    loading="{{nbLoading}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+</view>

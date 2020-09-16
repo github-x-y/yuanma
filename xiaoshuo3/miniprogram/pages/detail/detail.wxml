@@ -1,0 +1,118 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<wxs src="../../style/tem.wxs" module="commons" />
+<view class="container">
+<view class="type-title">
+     <view class="type-tt">
+         <image src="{{commons.splicing(type.cover)}}"></image>
+         <view class="type-dd">df</view>
+     </view>
+     <view class="type-hh">
+       <image src="{{commons.splicing(type.cover)}}"></image>
+     </view>
+     <view class="type-bb">
+        <text>{{type.title}}</text>
+        <view class="oo">
+          <text>{{type.rating.score}}分</text>
+          <text>{{type.rating.count}}人评价</text>
+        </view>
+     </view>
+  </view>
+  <view class="movice" scroll-y="ture">
+      <view class="movice-all">
+          <view class="movice-jianjie">
+             <text>类型:</text>
+             <text>{{type.minorCate}}</text>
+          </view>
+          <view class="movice-time">
+               <text>更新时间:</text>
+             <text>{{type.updated}}</text>
+          </view>
+          <view class="movice-time">
+              <text>更新至: </text>
+              <text>{{type.lastChapter}}</text>
+          </view>
+      </view>
+  </view>
+  <view class="button">
+      <button type="warn" plain size="mini" bindtap="click4">开始阅读</button>
+      <button type="primary" size="mini" bindtap="ShouChang">{{shu}}</button>
+  </view>
+  <view>
+     <view class="scroll-view" >
+         <view class="demo1 {{ current == 0 ? 'hover': ''}}" data-current="0" bindtap="click1">简介:</view>
+          <view class="demo2 {{ current == 1 ? 'hover': ''}}"   data-current="1" bindtap="click1">评论:{{total}}条</view>
+     </view>
+     <swiper class="gg" current="{{current}}" indicator-dots="{{indicatorDots}}"  duration="500">
+          <swiper-item >
+            <scroll-view class="scroll-view_H" scroll-y="true"  style="height:500rpx;">
+              <view class="movice-in">
+              <text>{{type.longIntro}}</text>
+          </view>
+           </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view class="scroll-view_H" scroll-y="true"  style="height:500rpx;">
+               <view class="pinglun-page">
+                    <view class="all" bindtap="modalinput">
+                      <view class="ping">
+                       <text>写评论</text>
+                      </view>
+                    <view class="ping-image">
+                      <image src="../../images/14.png"></image>
+                   </view>
+                    </view>
+                    <modal hidden="{{hiddenmodalput}}" title="请写下你的评论" 
+   		     	confirm-text="提交" cancel-text="取消" bindcancel="modalinput" 
+   		    	bindconfirm="confirm" >
+        <textarea placeholder="请输入内容" bindinput="haha"></textarea>
+          </modal>
+          <view class="pinglun-flex" wx:for="{{datalist}}" wx:for-item="comment" wx:key="index">
+                      <view class="pinglun-image">
+                          <image src="{{comment.avatarUrl}}"></image>
+                           <text class="yy">{{comment.name}}</text>
+                          <text class="pinglun-date">{{comment.time}}</text>
+                       </view>
+                       <view class="pinglun-all" scroll-y="true">
+                      <view class="pinglun-ziti">
+                           <text class="pinglun-hua">{{comment.content}}</text>
+                       </view>
+                </view> 
+                </view>
+                <view class="pinglun-flex" wx:for="{{reviewUrl}}" wx:for-item="comment" wx:key="index">
+                      <view class="pinglun-image">
+                          <image src="{{commons.covers(comment.author.avatar)}}"></image>
+                           <text class="yy">{{comment.title}}</text>
+                          <text class="pinglun-date">{{comment.created}}</text>
+                       </view>
+                       <view class="pinglun-all" scroll-y="true">
+                      <view class="pinglun-ziti">
+                           <text class="pinglun-hua">{{comment.content}}</text>
+                       </view>
+                </view> 
+                </view>
+                </view>      
+          </scroll-view>
+          </swiper-item>
+        </swiper>
+         <view class="film-lists" wx:for="{{1}}" wx:for-item="type" wx:key="index">
+        <view class="film-title">
+           <text class="renmen">猜你喜欢</text>
+       <view class="d">
+          <view class="shancu" bindtap="click6">
+            <text>换一批</text>
+            <image src="../../images/10.png"></image>
+           </view>
+        </view>
+        </view>
+        <view  class="cai" >
+             <navigator class="source" wx:for="{{shuzi}}" wx:for-item="shu" wx:key="index" url="../../pages/detail/detail?id={{booksource[shu]._id}}&title={{booksource[shu].title}}">
+                 <image src="{{commons.splicing(booksource[shu].cover)}}"></image>
+                 <view class="name">
+                    <text>{{booksource[shu].title}}</text>
+                    <text>{{booksource[shu].author}}</text>
+                 </view>
+             </navigator>
+        </view>
+   </view>
+    </view>
+  </view>

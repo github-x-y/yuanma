@@ -1,0 +1,8 @@
+<!--miniprogram/pages/mulu/muli.wxml-->
+<view class="container">
+<include wx:if="{{ zhangjielist.length==0 }}" src="../../style/tem.wxml"></include>
+<view class="zhangjie">
+   <text>共{{zhangjielist.length}}章</text>
+   <text class="{{index == i ?'a':'b'}}" bindtap="click5" wx:for="{{zhangjielist}}" wx:for-item="zhangjie" wx:key="index"  data-index="{{index}}">{{zhangjie.num}}</text>
+   </view>
+</view>

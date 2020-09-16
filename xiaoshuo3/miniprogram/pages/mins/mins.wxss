@@ -1,0 +1,26 @@
+/* miniprogram/pages/mins/mins.wxss */
+.container{
+  width: 100%;
+  white-space: nowrap;
+}
+.type{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10rpx 0;
+  border-bottom: 1px solid gray;
+}
+.mins{
+  display: inline-block;
+  justify-content: space-around;
+  padding: 10rpx 0rpx;
+  border-bottom: 1px solid gray;
+  font-size: smaller;
+  font-weight: 500;
+}
+.mins text{
+  padding: 0 10rpx;
+}
+.a{
+  color: red;
+}
