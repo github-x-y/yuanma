@@ -1,0 +1,2 @@
+@import "templates/loading/loading.wxss";
+@import "gg/gg.wxss"

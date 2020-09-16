@@ -1,0 +1,18 @@
+<!--pages/about/about.wxml-->
+<view class="about-page">
+    <view class="userinfo">
+         <image src="{{ userInfo.avatarUrl || '../../images/user.png'}}"></image>
+         <view wx:if="{{ userInfo }}" class="button">{{userInfo.nickName}}</view>
+         <button  wx:else plain type="warn" open-type="getUserInfo" bindgetuserinfo="getuserinfo">用户授权登录</button>
+    </view>
+    <view class="user-like">
+         <view class="user-text">收藏:</view>
+         <view class="user-likes">
+         <view class="like-list" wx:for="{{ like }}"  wx:key="index">
+              <film-item film="{{item}}" class="film-list"></film-item>
+              <button size="mini"  type="warn" plain bindtap="ShanChu" data-id="{{index}}">删除</button>
+         </view>
+         </view>
+    </view>
+    <view class="user-ti" wx:if="{{ showtisi }}">你还没有收藏......</view>
+</view>

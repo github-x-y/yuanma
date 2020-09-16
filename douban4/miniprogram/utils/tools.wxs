@@ -1,0 +1,6 @@
+function starImg(index,source){
+  return (index+1)*2<= source ? 'images/2.png' : 'images/1.png'
+}
+module.exports = {
+ starImg:starImg
+}

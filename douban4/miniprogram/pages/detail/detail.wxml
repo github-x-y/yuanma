@@ -1,0 +1,82 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<view class="container">
+  <view class="type-title">
+     <view class="type-tt">
+         <image src="{{filmid.pic.normal}}" ></image>
+         <view class="type-dd">df</view>
+     </view>
+     <view class="type-hh">
+       <image src="{{filmid.pic.normal}}"></image>
+     </view>
+     <view class="type-bb">
+        <text>{{filmid.title}}</text>
+        <view class="oo">
+          <text>{{filmid.rating.value}}分</text>
+          <text>{{filmid.rating.count}}人评价</text>
+        </view>
+     </view>
+  </view>
+  <view class="movice" >
+      <view class="movice-all">
+          <view class="movice-jianjie">
+             <text>电影简介:</text>
+             <text>{{filmid.card_subtitle}}</text>
+          </view>
+          <view class="movice-time">
+               <text>首映时间:</text>
+             <text>{{filmid.pubdate}}</text>
+          </view>
+          <view class="movice-in">
+              <text>剧情见绍: </text>
+              <text>{{filmid.intro}}</text>
+          </view>
+      </view>
+  </view>
+  <view class="movice-button">
+              <button type="primary" plain bindtap="ShouChang">收藏</button>
+          </view>
+      <!-- <view class="movice-play"> -->
+           <!-- <navigator url="../../pages/video/video?url={{filmid.id}}" class="movice-image">
+             <image src="{{filmid.video.cover_url}}"></image>
+             <view class="movice-Image">
+               <image  src="../../images/3.jpg"></image>
+               <view class="movice-times">
+                  <text>{{filmid.video.runtime}}</text>
+               </view>
+             </view>
+           </navigator> -->
+      <!-- </view>
+  </view> -->
+  <view class="actor">
+      <view class="actor-title">
+          <text>演员:</text>
+      </view>
+      <scroll-view class="actor-all" scroll-x="true">
+        <view class="actor-image" wx:for="{{filmid.actors}}" wx:for-item="actor" wx:key="index">
+          <image src="{{actor.cover_url}}"></image>
+          <view class="actor-name">
+            <text>{{actor.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+  <view class="pinglun-page">
+    <view class="pinglun-title">
+        <text>{{filmid.comment_count}}人评论 :</text> 
+    </view>
+    <view class="pinglun-flex" wx:for="{{comment}}" wx:for-item="comment" wx:key="index">
+    <view class="pinglun-image">
+            <image src="{{comment.user.avatar}}"></image>
+            <text class="yy">{{comment.user.name}}</text>
+             <text class="pinglun-date">{{comment.create_time}}</text>
+    </view>
+    <view class="pinglun-all" scroll-y="true">
+         <view class="pinglun-ziti">
+             <text class="pinglun-hua">{{comment.comment}}</text>
+         </view>       
+    </view>
+    </view>
+    <include  wx:if="{{ showlanding }}" src="../../templates/loading/loading.wxml"></include>
+    <include  wx:if="{{ showland }}" src="../../gg/gg.wxml"></include>
+  </view>
+</view>

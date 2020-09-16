@@ -1,0 +1,9 @@
+.load{
+  width: 100%;
+  text-align: center;
+}
+.load image{
+  width: 10%;
+  height: 30px;
+  padding: 4px;
+}

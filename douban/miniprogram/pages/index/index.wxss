@@ -1,0 +1,31 @@
+/**index.wxss**/
+.container{
+  width: 100%;
+}
+.film-type{
+  background-color: antiquewhite;
+}
+.film-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.film-title text{
+   padding-left: 4px;
+   border-left: 2px solid green;
+   font-weight: 700;
+}
+.d {
+  padding-right: 13px;
+  font-weight: 700;
+  color: green;
+}
+.film-lists{
+   width: 100%;
+   white-space: nowrap;
+}
+.film-list{
+  width: 120px;
+  padding: 12px;
+  display: inline-block;
+}

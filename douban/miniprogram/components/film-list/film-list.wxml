@@ -1,0 +1,14 @@
+<!--components/film-list/film-list.wxml-->
+<navigator url="../../pages/detail/detali">
+<view  class="film-list">
+           <image src="{{film.cover.url}}"></image>
+           <view class="film-name">
+             <text>{{film.title}}</text>
+           </view>
+           <view class="star" >
+             <image src="{{ tools.starImg(index,film.rating.value) }}"  wx:for="{{ 5 }}" wx:key="index"></image>
+             <text>{{film.rating.value}}</text>
+           </view>
+         </view>
+</navigator> 
+<wxs src="../../utils/tools.wxs" module="tools"></wxs>         

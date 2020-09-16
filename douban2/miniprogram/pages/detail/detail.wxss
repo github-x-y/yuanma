@@ -1,0 +1,172 @@
+/* miniprogram/pages/detail/detail.wxss */
+.container{
+  width: 100%;
+}
+.type-title{
+  height: 220px;
+}
+.type-tt{
+  height: 200px;
+  position: relative;
+}
+.type-tt image{
+  width: 100%;
+  height: 200px;
+}
+.type-dd{
+  width: 100%;
+  height: 200px;
+  background-color: darkblue;
+  position: absolute;
+  top:0;
+  background-color: black;
+  opacity: 0.4;
+}
+.type-hh{
+  height: 20px;
+}
+.type-hh image{
+  width: 80px;
+  height: 120px;
+  position: relative;
+  bottom: 100px;
+  left: 30px;
+}
+.type-bb{
+  position: relative;
+  bottom: 100px;
+  left: 120px;
+}
+.type-bb text{
+  /* padding: 5px; */
+  color: white;
+}
+.oo text{
+  font-size: smaller;
+  font-weight: 200;
+  padding: 20px 5px;
+}
+.movice{
+  width: 100%;
+
+}
+.movice-all{
+  width: 100%;
+  text-align: left;
+  font-size: small;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.movice-jianjie :first-child{
+   color: green;
+   padding-right: 5px;
+}
+.movice-time :first-child{
+  color: green;
+  padding-right: 5px;
+}
+.movice-in :first-child{
+  color: green;
+  padding-right: 5px;
+}
+.movice-button{
+  margin: 10px 20px;
+}
+.actor{
+  width: 100%;
+  height: 200px;
+}
+.actor-all{
+  white-space: nowrap;
+  padding-left: 3px;
+}
+.actor-image{
+  width: 100px;
+  padding: 6px;
+  display: inline-block;
+  height: 130px;
+}
+.actor-image image{
+  width: 100%;
+  height: 100px;
+}
+.actor-title,.pinglun-title{
+  border-left: 2px solid green;
+  border-bottom: 1px solid tan;
+  padding: 3px 4px;
+  font-size: large;
+  font-weight: 600;
+}
+.actor-name{
+  font-weight: 600;
+  font-size: small;
+}
+.pinglun-flex{
+  display: flex;
+  flex-direction: column;
+}
+.pinglun-all{
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+  padding-left: 4px;
+  border-bottom: 1px solid tan;
+  padding-bottom: 10px;
+}
+.pinglun-image text{
+   position: relative;
+   left: 10px;
+}
+.pinglun-image image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: 6px;
+  left: 6px;
+}
+.pinglun-ziti text{
+  padding: 10px 0;
+}
+.pinglun-date{
+  font-size: smaller;
+  font-weight: 400;
+  padding: 4px;
+}
+.pinglun-hua{
+  font-size: small;
+  color: black;
+}
+.yy{
+  color: red;
+}
+.movice-vido{
+  width: 100%;
+}
+.movice-image image{
+  width: 140px;
+  height: 165px;
+}
+.movice-image{
+  width: 140px;
+  height: 165px;
+  position: relative;
+  padding: 10px 0;
+}
+.movice-Image{
+  position: absolute;
+  bottom: 55px;
+  left: 45px;
+}
+.movice-Image image{
+  width: 50px;
+  height: 45px;
+  border-radius: 50%;
+}
+.movice-times{
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+}
+

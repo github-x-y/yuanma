@@ -1,0 +1,47 @@
+/* miniprogram/pages/sources/sources.wxss */
+.container{
+  width: 100%;
+}
+.film-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.dd{
+  justify-content: center;
+}
+.film-title text{
+  padding-left: 4px;
+  border-left: 2px solid green;
+  font-weight: 700;
+}
+.film-lists{
+  width: 100%;
+  white-space: nowrap;
+}
+.film-list{
+ width: 33.3%;
+ display: inline-block;
+ padding: 0 3px;
+ box-sizing: border-box;
+}
+.film-list image{
+  width: 100%;
+  height: 150px;
+}
+.star image{
+ width: 10px;
+ height: 10px;
+}
+.film-name{
+  font-weight: 600;
+  font-size: small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.star text{
+ padding-left: 8px;
+ font-size: small;
+ font-weight: 200;
+}

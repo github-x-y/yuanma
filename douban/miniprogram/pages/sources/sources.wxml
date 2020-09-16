@@ -1,0 +1,15 @@
+<!--miniprogram/pages/sources/sources.wxml-->
+<view class="container">
+     <view class="film-title">
+        <text>{{films.litle}}</text>
+      </view>
+      <view >
+        <view class="dd">
+           <view class="cc">
+              <film-item class="film-list" wx:for="{{ films.list }}"  film="{{item}}" wx:key="index"></film-item>
+           </view>
+        </view>
+      </view>
+      <include  wx:if="{{ showlanding }}" src="../../templates/loading/loading.wxml"></include>
+      <include  wx:if="{{ showland }}" src="../../gg/gg.wxml"></include>
+</view>
